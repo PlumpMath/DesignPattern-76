@@ -1,25 +1,32 @@
 package org.formation.iterator;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import org.formation.iteratorJava.ChannelIterator;
 
 public class ChannelIteratorImpl implements ChannelCollection {
 
 	private List<Channel> channels;
 	
+	public ChannelIteratorImpl() {
+		channels = new ArrayList<>();
+	}
+
 	@Override
 	public void addChannel(Channel c) {
 		// TODO Auto-generated method stub
-		
+		channels.add(c);
 	}
 
 	@Override
 	public void removeChannel(Channel c) {
 		// TODO Auto-generated method stub
-		
+		channels.remove(c);
 	}
-
+	
 	@Override
-	public ChannelIterator iterator(ChannelTypeEnum type) {
+	public org.formation.iterator.ChannelIterator iterator(ChannelTypeEnum type) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -53,5 +60,7 @@ public class ChannelIteratorImpl implements ChannelCollection {
 			return c;
 		}
 	}
+
+
 
 }
